@@ -48,6 +48,9 @@ export default function First() {
   const [lon, setLon] = useState("");
   const [getData, setGetData] = useState(false);
 
+  // Enter your api key here
+  const ID = "";
+
   //   Get current time in UNIX time (unit used for API calls)
   let start = Math.floor(new Date().getTime() / 1000);
 
@@ -62,7 +65,7 @@ export default function First() {
   const [city, setCity] = useState("");
 
   //   API call for weather stats
-  var url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=f8e5b785a722ebe710b6492f8b0a3399&units=metric`;
+  var url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${ID}&units=metric`;
 
   //   API call to get lat and lon for a given city
   var geocodingUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${location},ca&appid=32910035448ac29ba519a8622cd8c3b8`;
